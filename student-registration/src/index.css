@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  min-height: 100vh;
+  color: #202033;
+  background:
+    radial-gradient(circle at 10% 10%, #e8e2ff 0, transparent 30%),
+    radial-gradient(circle at 90% 85%, #e2eaff 0, transparent 30%),
+    #f7f7fc;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+body > #root > div {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 50px 24px;
+}
+
+h1 {
+  margin-bottom: 28px;
+  color: #202033;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(28px, 5vw, 36px);
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e9e8f2;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(43, 35, 93, 0.08);
+}
+
+input {
+  width: 100%;
+  min-height: 52px;
+  padding: 0 16px;
+  color: #202033;
+  background: #fafaff;
+  border: 1px solid #e5e4ef;
+  border-radius: 11px;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+input::placeholder {
+  color: #a3a2b5;
+}
+
+input:focus {
+  background: #ffffff;
+  border-color: #6d4aff;
+  box-shadow: 0 0 0 4px rgba(109, 74, 255, 0.1);
+}
+
+button {
+  min-height: 52px;
+  padding: 0 20px;
+  color: #ffffff;
+  background: linear-gradient(110deg, #7957ff, #5e3be8);
+  border: none;
+  border-radius: 11px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(109, 74, 255, 0.2);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(110deg, #6e4af4, #4f2ed8);
+  box-shadow: 0 12px 24px rgba(109, 74, 255, 0.28);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+h2 {
+  margin: 38px 0 20px;
+  font-family: "Manrope", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+}
+
+h2 + p {
+  padding: 24px;
+  color: #85859b;
+  background: #ffffff;
+  border: 1px dashed #dedaf2;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+h2 ~ div {
+  margin-bottom: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  background: #ffffff;
+  border: 1px solid #e9e8f2;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(43, 35, 93, 0.04);
+  animation: slide-up 0.3s ease both;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+h2 ~ div:hover {
+  border-color: #d4caff;
+  transform: translateY(-2px);
+}
+
+h2 ~ div h3 {
+  color: #29283c;
+  font-size: 15px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+h2 ~ div p {
+  color: #85859b;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  body > #root > div {
+    padding: 32px 16px;
+  }
+
+  h1 {
+    margin-bottom: 24px;
+    font-size: 28px;
+  }
+
+  form {
+    padding: 22px 18px;
+    border-radius: 16px;
+  }
+
+  h2 {
+    margin-top: 32px;
+    font-size: 20px;
+  }
+
+  h2 ~ div {
+    padding: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
