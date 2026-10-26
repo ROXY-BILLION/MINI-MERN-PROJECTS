@@ -1,0 +1,254 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, "Segoe UI", sans-serif;
+  color: #172044;
+  background: #f4f6ff;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 55px 24px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 5% 5%, #e5eaff 0, transparent 30%),
+    radial-gradient(circle at 95% 95%, #e8dcff 0, transparent 28%),
+    #f5f7ff;
+}
+
+.task-app {
+  width: 100%;
+  max-width: 900px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #dce5ff;
+  border-radius: 22px;
+  box-shadow: 0 22px 65px rgba(56, 78, 150, 0.12);
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 35px;
+  background: linear-gradient(120deg, #f8f9ff, #edf0ff);
+  border-bottom: 1px solid #e1e7ff;
+}
+
+.logo {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  color: white;
+  font-size: 34px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #4388ff, #7554ee);
+}
+
+.app-header h1 {
+  font-size: clamp(27px, 4vw, 38px);
+  letter-spacing: -1.2px;
+}
+
+.app-header p {
+  margin-top: 8px;
+  color: #7180a5;
+  font-size: 15px;
+}
+
+.app-content {
+  display: grid;
+  gap: 24px;
+  padding: 28px;
+}
+
+.panel {
+  padding: 24px;
+  border: 1px solid #e0e8ff;
+  border-radius: 15px;
+  background: #fbfcff;
+}
+
+.panel h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  font-size: 21px;
+}
+
+.plus-icon {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: white;
+  background: #6857f5;
+  font-size: 25px;
+}
+
+.task-form {
+  display: grid;
+  gap: 16px;
+}
+
+.task-form input,
+.task-form textarea {
+  width: 100%;
+  padding: 15px 16px;
+  border: 1px solid #dce3f3;
+  border-radius: 11px;
+  outline: none;
+  color: #172044;
+  background: white;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.task-form input:focus,
+.task-form textarea:focus {
+  border-color: #7862f5;
+  box-shadow: 0 0 0 3px rgba(120, 98, 245, 0.12);
+}
+
+.task-form textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.task-form input::placeholder,
+.task-form textarea::placeholder {
+  color: #8793b1;
+}
+
+.task-form button {
+  padding: 15px;
+  border: none;
+  border-radius: 11px;
+  color: white;
+  background: linear-gradient(100deg, #477fff, #8550e9);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.task-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(103, 91, 235, 0.22);
+}
+
+.tasks-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.tasks-heading h2 {
+  margin-bottom: 0;
+}
+
+.task-count {
+  padding: 7px 13px;
+  border-radius: 30px;
+  color: #6551e8;
+  background: #eeebff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.empty-state {
+  padding: 50px 15px 35px;
+  text-align: center;
+}
+
+.empty-icon {
+  width: 90px;
+  height: 90px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 22px;
+  border-radius: 25px;
+  color: #7062ee;
+  background: linear-gradient(135deg, #e9efff, #eee5ff);
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.empty-state h3 {
+  margin-bottom: 9px;
+  font-size: 21px;
+}
+
+.empty-state p {
+  color: #7c89a9;
+  font-size: 15px;
+}
+
+footer {
+  margin-top: 28px;
+  color: #7985a6;
+  font-size: 13px;
+  text-align: center;
+}
+
+footer span {
+  margin-right: 8px;
+  color: #8057ed;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 24px 12px;
+  }
+
+  .app-header {
+    gap: 14px;
+    padding: 24px 18px;
+  }
+
+  .logo {
+    width: 45px;
+    height: 45px;
+    font-size: 27px;
+  }
+
+  .app-header p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .app-content {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .panel {
+    padding: 18px 14px;
+  }
+
+  .panel h2 {
+    font-size: 18px;
+  }
+
+  .empty-state {
+    padding: 38px 8px 25px;
+  }
+}
