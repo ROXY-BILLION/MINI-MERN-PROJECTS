@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5005/api/movies";
+const API_URL = "https://movie-tracker-backend-oiss.onrender.com/";
 
 export const getMovies = async () => {
     const response = await fetch(API_URL);
