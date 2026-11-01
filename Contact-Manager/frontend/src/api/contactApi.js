@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/contacts";
+const API_URL = "https://conatct-manager-api.onrender.com/api/contacts";
 
 const handleResponse = async (response) => {
     const data = await response.json();
